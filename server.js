@@ -4,7 +4,8 @@ const fs = require('fs');
 const hbs = require('hbs');
 const promisedHandlebars = require('promised-handlebars');
 
-const  port = proces.env.PORT || 8080;
+const  port = process.env.PORT || 8080;
+
 var Handlebars = promisedHandlebars(require('handlebars'));
 var app = express();
 
@@ -118,11 +119,11 @@ app.get('/404', (request, response) => {
     })
 });
 
-
+/*
 app.listen(8080, () => {
     console.log('Server is up on the port 8080')
 });
-
+*/
 app.listen(port, () => {
     console.log(`Server is up on the port ${port}`)
 });
